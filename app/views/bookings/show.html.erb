@@ -1,0 +1,40 @@
+
+<table>
+<h1>Booking Details </h1>
+<thead>
+    <th>Name</th>
+    <th>contact</th>
+    <th>Email</th>
+    <th>Role</th>
+    <th>Booking</th>
+    
+    <th> Event Name</th>
+    <th>start_time</th>
+    <th>end_time</th>
+    <th>location</th>
+    <th>city</th>
+    <th>Category</th>
+    <th>confirm</th>
+    <th>cancelled</th>
+    
+</thead>
+<tbody>
+  <tr>
+      <td><%= @booking.user.name %></td>
+      <td><%= @booking.user.phone %></td>
+      <td><%= @booking.user.email %></td>
+      <td><%= @booking.user.roles.last.name %></td>
+      <td><%= @booking.status %></td>
+      <td><%= @booking.event.name %></td>
+      <td><%= @booking.event.start_time %></td>
+      <td><%= @booking.event.end_time %></td>
+      <td><%= @booking.event.location.name %></td>
+      <td><%= @booking.event.location.city.name %></td>
+      <td><%= @booking.event.category.name %></td>
+      <td><%=link_to "confirm", user_booking_confirm_path(user_id: @booking.user.id, booking_id: @booking.id), data: { "turbo-method": :put } %></td>
+      <td><%=link_to "canclled", user_booking_cancle_path(user_id: @booking.user.id, booking_id: @booking.id), data: { "turbo-method": :put } %></td>
+
+  </tr>
+</tbody>
+
+</table>
