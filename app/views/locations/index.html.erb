@@ -1,0 +1,23 @@
+<table>
+<h1 class = user>Location Details </h1>
+<thead>
+    <th>Name</th>
+    <th>address</th>
+    <th>Count</th>
+    <th>city</th>
+    
+</thead>
+<tbody>
+<% @locations.each do |u| %>
+  <tr>
+      <td><%= u.name %></td>
+      <td><%= u.address %></td>
+      <td><%= u.capacity %></td>
+      <td><%= u.city.name %></td>
+      
+  </tr>
+  <% end %>
+</tbody>
+
+</table>
+<h1 class:a><%=link_to " New location", new_location_path %></h1>
