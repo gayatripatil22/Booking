@@ -1,0 +1,19 @@
+<table class = a>
+<h1>Role </h1>
+<thead>
+    <th>Name</th>
+    <th>delete</th>
+</thead>
+<tbody>
+<% @roles.each do |u| %>
+  <tr>
+      <td><%= u.name %></td>
+    <td> <%= link_to "destroy", role_path(u), data: {
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure want to delete?"
+  } %></td>
+  </tr>
+  <% end %>
+</tbody>
+</table>
+<h1 class:a><%=link_to "add role", new_role_path %></h1>
