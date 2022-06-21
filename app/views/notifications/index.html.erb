@@ -1,0 +1,15 @@
+<table class = a>
+<h1>Notification </h1>
+<thead>
+    <th>Name</th>
+    <th>message</th>
+</thead>
+<tbody>
+<% @notification.each do |u| %>
+  <tr>
+      <td><%= u.notifiable_type %></td>
+      <td><%= u.message %></td>
+     </tr>
+  <% end %>
+</tbody>
+</table>
