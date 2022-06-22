@@ -1,0 +1,27 @@
+<table>
+<h1>Booking Details </h1>
+<thead>
+   <th>user name</th>
+   <th>event</th>
+    <th>status</th>
+    <th>seates</th>
+    <th>show details</th>
+    
+    
+</thead>
+<tbody>
+<% @bookings.each do |u| %>
+  <tr>
+     <td><%= u.user.name  %></td>
+     <td><%= u.event.name %></td>
+      <td><%= u.status %></td>
+      <td><%= u.capacity %></td>
+      
+      
+      <td><%=link_to "show", bookings_show_path(u) %></td>  
+     
+  </tr>
+  <% end %>
+</tbody>
+
+</table>
