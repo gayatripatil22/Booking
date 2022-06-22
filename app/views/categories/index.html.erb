@@ -1,0 +1,15 @@
+
+<table>
+<h1>Category Details </h1>
+<thead>
+    <th>Name</th>
+</thead>
+<tbody>
+<% @categories.each do |u| %>
+  <tr>
+      <td><%= u.name %></td>
+  </tr>
+  <% end %>
+</tbody>
+</table>
+<h1 class:a><%=link_to "add category", new_category_path %></h1>
