@@ -1,0 +1,12 @@
+<%= form_with model: @user do |f| %>
+    <h1>New notification</h1>
+    <%= f.label :notifiable_type %><br>
+    <%= f.text_field :notifiable_type %>
+    <br>
+    <br>
+    <%= f.label :id %><br>
+    <%= f.text_field :notifiable_id %>
+        <br>
+        <br>    
+    <%= f.submit 'submit' %>
+    <% end %>
